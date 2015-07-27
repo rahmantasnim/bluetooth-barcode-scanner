@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
+
 #import "Detector.h"
 
 @implementation detector
@@ -69,9 +70,9 @@
     
     // get barcode (metadata) output
     AVCaptureMetadataOutput *metadataOutput = [[AVCaptureMetadataOutput alloc] init];
-    [metadataOutput setMetadataObjectsDelegate:(NSObject<delegator>) queue:dispatch_get_main_queue()];
-    [captureSession addOutput:metadataOutput];
-    
+    dispatch_queue_t barcodeQueue;
+    barcodeQueue = dispatch_queue_create("com.rahman-berra.barcodeQueue", NULL);
+    [metadataOutput setMetadataObjectsDelegate:(NSObject<delegator>) queue:barcodeQueue];
     
     [captureSession startRunning];
 

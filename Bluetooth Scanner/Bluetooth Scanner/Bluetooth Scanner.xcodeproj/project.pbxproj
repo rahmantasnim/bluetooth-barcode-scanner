@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B0AB2B7D1B6292F800F9E889 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AB2B7C1B6292F800F9E889 /* ViewController.xib */; };
 		B0AB2BAF1B62A79C00F9E889 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AB2BAE1B62A79C00F9E889 /* AVFoundation.framework */; };
-		B0AB2BB11B62A7E400F9E889 /* Detector.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AB2BB01B62A7E400F9E889 /* Detector.m */; };
 		B0AB2BB31B62D26300F9E889 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AB2BB21B62D26300F9E889 /* UIKit.framework */; };
 		B0DEA4A91B59A1850044AE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DEA4A81B59A1850044AE10 /* main.m */; };
 		B0DEA4AC1B59A1850044AE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DEA4AB1B59A1850044AE10 /* AppDelegate.m */; };
@@ -30,10 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C6DA69B1B66B81B00DA49C7 /* Detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detector.h; sourceTree = "<group>"; };
 		B0AB2B7C1B6292F800F9E889 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		B0AB2BAE1B62A79C00F9E889 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B0AB2BB01B62A7E400F9E889 /* Detector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Detector.m; path = ../Detector.m; sourceTree = "<group>"; };
 		B0AB2BB21B62D26300F9E889 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0DEA4A31B59A1850044AE10 /* Bluetooth Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DEA4A71B59A1850044AE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,8 +93,6 @@
 				B0DEA4AB1B59A1850044AE10 /* AppDelegate.m */,
 				B0DEA4AD1B59A1850044AE10 /* ViewController.h */,
 				B0DEA4AE1B59A1850044AE10 /* ViewController.m */,
-				B0AB2BB01B62A7E400F9E889 /* Detector.m */,
-				4C6DA69B1B66B81B00DA49C7 /* Detector.h */,
 				B0DEA4B31B59A1850044AE10 /* Images.xcassets */,
 				B0DEA4B51B59A1850044AE10 /* LaunchScreen.xib */,
 				B0DEA4A61B59A1850044AE10 /* Supporting Files */,
@@ -235,7 +230,6 @@
 				B0DEA4AF1B59A1850044AE10 /* ViewController.m in Sources */,
 				B0DEA4AC1B59A1850044AE10 /* AppDelegate.m in Sources */,
 				B0DEA4A91B59A1850044AE10 /* main.m in Sources */,
-				B0AB2BB11B62A7E400F9E889 /* Detector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
