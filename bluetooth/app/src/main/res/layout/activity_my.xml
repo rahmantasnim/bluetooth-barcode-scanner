@@ -1,19 +1,64 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<com.journeyapps.barcodescanner.CompoundBarcodeView
+    android:id="@+id/barcode_scanner"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_above="@+id/buttonsLayout"
+    android:layout_alignParentTop="true">
+
+</com.journeyapps.barcodescanner.CompoundBarcodeView>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/buttonsLayout"
+    android:layout_toLeftOf="@+id/centerHorizont">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:onClick="pause" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resume"
+        android:onClick="resume" />
+
+</LinearLayout>
 
     <EditText android:id="@+id/edit_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/edit_message" />
+        android:hint="@string/edit_message"
+        android:layout_below="@+id/buttonsLayout"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
+        android:layout_toEndOf="@+id/edit_message"
         android:onClick="sendMessage" />
 
+<View
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/centerHorizont" />
 
-</LinearLayout>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/centerHorizont"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignTop="@id/buttonsLayout"
+    android:id="@+id/barcodePreview" />
+
+</RelativeLayout>
