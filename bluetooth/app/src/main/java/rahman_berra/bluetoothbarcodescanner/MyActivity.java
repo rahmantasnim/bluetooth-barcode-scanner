@@ -35,8 +35,7 @@ public class MyActivity extends AppCompatActivity {
                 barcodeView.setStatusText(result.getText());
             }
             //Added preview of scanned barcode
-            ImageView imageView = (ImageView) findViewById(R.id.barcodePreview);
-            imageView.setImageBitmap(result.getBitmapWithResultPoints(Color.YELLOW));
+
         }
 
         @Override
@@ -68,14 +67,6 @@ public class MyActivity extends AppCompatActivity {
         super.onPause();
 
         barcodeView.pause();
-    }
-
-    public void pause(View view) {
-        barcodeView.pause();
-    }
-
-    public void resume(View view) {
-        barcodeView.resume();
     }
 
     public void triggerScan(View view) {
