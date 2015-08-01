@@ -28,21 +28,6 @@ public class MyActivity extends AppCompatActivity {
     private static final String TAG = MyActivity.class.getSimpleName();
     private CompoundBarcodeView barcodeView;
 
-    private BarcodeCallback callback = new BarcodeCallback() {
-        @Override
-        public void barcodeResult(BarcodeResult result) {
-            if (result.getText() != null) {
-                barcodeView.setStatusText(result.getText());
-            }
-            //Added preview of scanned barcode
-
-        }
-
-        @Override
-        public void possibleResultPoints(List<ResultPoint> resultPoints) {
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +38,7 @@ public class MyActivity extends AppCompatActivity {
 
         barcodeView = (CompoundBarcodeView) findViewById(R.id.barcode_scanner);
         barcodeView.decodeContinuous(callback);
+        barcodeView.setStatusText("TEST MESSAGE");
     }
 
     @Override
@@ -77,6 +63,21 @@ public class MyActivity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         return barcodeView.onKeyDown(keyCode, event) || super.onKeyDown(keyCode, event);
     }
+
+    private BarcodeCallback callback = new BarcodeCallback() {
+        @Override
+        public void barcodeResult(BarcodeResult result) {
+            if (result.getText() != null) {
+                barcodeView.setStatusText(result.getText());
+                EditText editText = (EditText) findViewById(R.id.edit_message);
+                editText.setText(result.getText());
+            }
+        }
+
+        @Override
+        public void possibleResultPoints(List<ResultPoint> resultPoints) {
+        }
+    };
 
     public void sendMessage(View view) {
         // Responding to the send button
